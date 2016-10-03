@@ -244,7 +244,8 @@ module.exports = function (grunt) {
         },
         files: {
           '.tmp/styles/main.css': '<%= yeoman.app %>/styles/main.scss',
-          '.tmp/styles/enhanced.css': '<%= yeoman.app %>/styles/enhanced.scss'
+          '.tmp/styles/enhanced.css': '<%= yeoman.app %>/styles/enhanced.scss',
+          '.tmp/styles/about.css': '<%= yeoman.app %>/styles/about.scss'
         }
       }
     },

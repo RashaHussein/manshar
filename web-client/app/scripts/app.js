@@ -48,11 +48,19 @@ angular.module('webClientApp', [
       return path + '/';
     });
     // Set the default route to to to .popular child state
-    $urlRouterProvider.when('/', 'articles/list/popular/');
+    // $urlRouterProvider.when('/', 'articles/list/popular/');
     $stateProvider
       .state('app', {
-        abstract: true,
-        url: '/'
+        url: '/',
+        views: {
+          'content@': {
+            templateUrl: '/about.html'
+          }
+        },
+        resolve: {
+          //check localStorage to see if user viewed this page and redirect to
+          // articles if they did
+        }
       })
       .state('app.articles', {
         abstract: true,
